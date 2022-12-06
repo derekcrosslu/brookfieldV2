@@ -1,40 +1,33 @@
 
-import { Animation6, Animation6a,Animation5, Animation5a } from '../desktop/Animations'
+import { Animation5, Animation5a } from '../desktop/Animations'
 import React from 'react'
 import {Waypoint} from 'react-waypoint'
 
 const FifthFrame = () => {
-  const [on1, toggle1] = React.useState(true);
-  const [on2, toggle2] = React.useState(true)
+  const [on, toggle] = React.useState(true);
   return (
-    <div className={`centerColumn  h-full w-full pb-20 pt-0 gap-0 bg-white`} >
+    <div className={`centerColumn  h-full w-full pt-0 gap-0 bg-white`} >
       <Waypoint
-        onEnter={() => toggle1(false)}
-        // bottomOffset='45%'
+        onEnter={() => toggle(false)}
+        bottomOffset='85%'
       />
       <div className='centerRow gap-2 max-w-140 '>
         <div className='text-brandblue flex flex-col items-start gap-5 pr-0 max-w-100 min-w-70 '>
                 <div className='heading min-w-100 text-brandblue'>Brookfield Asset Management</div>
-                <div className='text-xl  max-w-100 min-w-99'>
-                  An asset-lite manager investing third party capital through its private funds
-                </div>
-                <ul className='text-xl pl-12 flex flex-col gap-2 max-w-100 list'> 
-                  <li >Manages money for Limited Partners</li>
-                  <li >Requires little or no [balance sheet] capital</li>
-                  <li >Higher dividend payout ratio</li>
+                <ul className='text-xl pl-6 flex flex-col gap-2 max-w-100 list'> 
+                  <li>Offers alternative investment strategies across the risk-return spectrum</li>
+                  <li>Provides innovative investment solutions to over 2,000 clients</li>
+                  <li>Requires little or no balance-sheet capital</li>
+                  <li>Provides shareholders with a higher dividend payout ratio</li>
                 </ul>
         </div>
         <div className=''>
-       {  on1? <Animation5  />:<Animation5a  />}
+       {  on? <Animation5  />:<Animation5a  />}
         </div>
       </div>
-              <Waypoint
-        onEnter={() => toggle2(false)}
-        // bottomOffset='45%'
-      />
-      <div className=' -ml-20'>
-   { on2? <Animation6 />: <Animation6a />}
-      </div>
+      {/* <div className=' -ml-20'>
+   { on? <Animation6 />: <Animation6a />}
+      </div> */}
 
     </div>
   )
